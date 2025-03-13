@@ -39,4 +39,9 @@
 >> operations with arguments <br>
 >> Types of parameters <br>
 >> *args, **kwargs <br>
->> assert keyword
+>> assert keyword <br>
+### Built-in Methods / Functions
+>> default Methods
+>> Methods for (string, list, dictionary, sets, tuples)
+>> lambda function, filter, reduce
+>> Math functions
