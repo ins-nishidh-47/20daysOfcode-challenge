@@ -41,7 +41,7 @@
 >> *args, **kwargs <br>
 >> assert keyword <br>
 ### Built-in Methods / Functions
->> default Methods
->> Methods for (string, list, dictionary, sets, tuples)
->> lambda function, filter, reduce
->> Math functions
+>> default Methods <br>
+>> Methods for (string, list, dictionary, sets, tuples)<br>
+>> lambda function, filter, reduce <br>
+>> Math functions <br>
