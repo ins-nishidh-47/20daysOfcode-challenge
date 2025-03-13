@@ -32,7 +32,7 @@
 >> for loop, while loop
 >> for else loop
 ## Day 2
-> Will learn how to create functions and the some built in methods
+> Will learn how to create functions and the some built-in methods
 ### what is function ? how to create a function
 >> def keyword <br>
 >> pass keyword <br>
