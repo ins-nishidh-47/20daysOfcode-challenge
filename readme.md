@@ -45,3 +45,8 @@
 >> Methods for (string, list, dictionary, sets, tuples)<br>
 >> lambda function, filter, reduce <br>
 >> Math functions <br>
+## Day 3
+### Text file handling
+>> Methods of Opening file <br>
+>> Modes : (a, w, r, a+, r+, w+) <br>
+>> Python file Methods <br>
