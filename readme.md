@@ -50,3 +50,9 @@
 >> Methods of Opening file <br>
 >> Modes : (a, w, r, a+, r+, w+) <br>
 >> Python file Methods <br>
+## Day 4
+### Binary file handling
+>> What is Pickling and unpickling <br>
+>> Methods of Opening file <br>
+>> Modes : (ab, wb, rb, ab+, rb+, wb+) <br>
+>> Pickling file Methods <br>
