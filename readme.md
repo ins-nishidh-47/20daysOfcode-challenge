@@ -56,3 +56,21 @@
 >> Methods of Opening file <br>
 >> Modes : (ab, wb, rb, ab+, rb+, wb+) <br>
 >> Pickling file Methods <br>
+## Day 5
+> Learning how to handle CSV files effectively using Python's `csv` module.
+### Writing CSV Files
+>> **`csv.writer()`** to write list-based data.<br>
+>> **`csv.DictWriter()`** to write dictionary-based data.<br>
+### Reading CSV Files
+>> **`csv.reader()`** to read list-based data.<br>
+>> **`csv.DictReader()`** to read dictionary-based data.<br>
+### Appending Data to CSV Files
+>> Writing additional data without overwriting existing content
+### Important Concepts
+>> **`newline=''`** for correct file formatting.<br>
+>> **Modes:** `w` (write), `a` (append), `r` (read).<br>
+### Example Methods Covered
+>> Writing CSV files.<br>
+>> Reading CSV files.<br>
+>> Appending data to CSV files.<br>
+>> Writing and reading CSV files using dictionaries.<br>
