@@ -74,3 +74,22 @@
 >> Reading CSV files.<br>
 >> Appending data to CSV files.<br>
 >> Writing and reading CSV files using dictionaries.<br>
+## Day 6
+> Exploring Intermediate Python Concepts <br>
+### Exception Handling in Python <br>
+>> try, except and finally block <br>
+>> ZeroDivisionError, FileNotFoundError <br>
+>> Raising Exceptions <br>
+### Debugging Basics <br>
+>> Using print() for debugging <br>
+>> Introduction to Python's pdb module <br>
+>> Stepping through code interactively <br>
+### Pandas Library (Day1) <br>
+>> Data Manipulation with pandas <br>
+>> Reading CSV files with pandas.read_csv() <br>
+>> Filtering data based on conditions <br>
+>> Saving filtered data to new CSV files <br>
+### Practical Exercises <br>
+>> Handling file operations errors <br>
+>> Validating user input with exceptions <br>
+>> Debugging code with intentional errors <br>
