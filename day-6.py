@@ -1,4 +1,4 @@
-# Day 6 - Exploring Intermediate Python Concepts
+# Day 6 - Exploring Intermediate Python Concepts.
 
 # Exception Handling in Python
 # Example 1: Handling ZeroDivisionError and FileNotFoundError
