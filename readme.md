@@ -58,7 +58,7 @@
 >> Pickling file Methods <br>
 ## Day 5
 > Learning how to handle CSV files effectively using Python's `csv` module.
-### Writing CSV Files
+### Writing pip install matplotlibCSV Files
 >> **`csv.writer()`** to write list-based data.<br>
 >> **`csv.DictWriter()`** to write dictionary-based data.<br>
 ### Reading CSV Files
@@ -93,3 +93,36 @@
 >> Handling file operations errors <br>
 >> Validating user input with exceptions <br>
 >> Debugging code with intentional errors <br>
+## Day 7
+> Advanced Data Analysis with Pandas (Day 2)
+### Data Creation <br>
+>> Creating DataFrames using `pd.DataFrame()` <br>
+### Data Inspection <br>
+>> `.info()` for data overview <br>
+>> `.describe()` for statistics <br>
+>> `.head()` and `.tail()` for quick data sampling <br>
+### Data Cleaning <br>
+>> Handling missing values with `.fillna()` <br>
+>> Removing duplicates with `.drop_duplicates()` <br>
+### Sorting & Indexing <br>
+>> Sorting with `.sort_values()` <br>
+>> Accessing data with `.loc[]` and `.iloc[]` <br>
+### Data Transformation <br>
+>> Applying calculations with `.apply()` <br>
+### Grouping and Aggregation <br>
+>> `.groupby()` for calculating grouped statistics <br>
+### Data Merging <br>
+>> Using `.merge()` to combine data <br>
+### Data Visualization <br>
+>> Visualizing data using `.plot()` with Matplotlib integration <br>
+### Pivot Tables <br>
+>> Creating pivot tables for summarizing data <br>
+### Date and Time Handling <br>
+>> Using `pd.to_datetime()` for date conversion <br>
+### MultiIndexing <br>
+>> Setting multi-level indexes with `.set_index()` <br>
+### Adding a Calculated Column <br>
+>> Creating new calculated columns (e.g., Annual Salary) <br>
+### File Handling <br>
+>> Saving processed data using `.to_csv()` <br>
+
