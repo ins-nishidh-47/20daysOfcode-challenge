@@ -125,4 +125,32 @@
 >> Creating new calculated columns (e.g., Annual Salary) <br>
 ### File Handling <br>
 >> Saving processed data using `.to_csv()` <br>
-
+## Day 8
+> Understanding Object-Oriented Programming concepts like classes, objects, inheritance, and threading in Python.
+### Classes and Objects <br>
+>> Creating Classes using `class` keyword <br>
+>> Defining Constructor (`__init__`) <br>
+>> Defining string representation (`__str__`) <br>
+>> Defining destructor (`__del__`) <br>
+>> Creating Methods for Operations <br>
+>> Arithmetic Operations: `add()`, `subtract()`, `multiply()`, `divide()` <br>
+>> Additional Methods: `floor_divide()` for integer division <br>
+### Inheritance <br>
+>> Extending Class Functionality <br>
+>> Overriding Methods in Derived Classes <br>
+>> Advanced Operations: `power()`, `modulo()` <br>
+>> Checking Conditions: `is_even()`, `is_prime()` <br>
+### Threading in Python <br>
+>> Creating Threads using `threading.Thread` <br>
+>> Running Multiple Tasks Concurrently <br>
+>> Synchronizing Threads with `.join()` <br>
+>> Practical Examples: <br>
+>>> Printing Numbers <br>
+>>> Printing Letters <br>
+>>> Displaying Squares <br>
+>>> Displaying Cubes <br>
+### Key Concepts Demonstrated <br>
+>> Arithmetic Operations with Error Handling <br>
+>> Prime Number Checking <br>
+>> Multi-threading for Simultaneous Execution <br>
+>> Ensuring Efficient Code Execution with Threads <br>
