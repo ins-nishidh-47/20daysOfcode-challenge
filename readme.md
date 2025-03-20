@@ -156,9 +156,9 @@
 >> Ensuring Efficient Code Execution with Threads <br>
 ## Day 9
 ## Concepts
->> Class and Object creation
->> Instance variables and Methods, and Class level attributes
->> Model systems with class inheritance i.e., inherit From Other Classes
->> Parent Classes and Child Classes
->> Extend the functionality of Parent Classes using Child class
->> Object checking
+>> Class and Object creation <br>
+>> Instance variables and Methods, and Class level attributes <br>
+>> Model systems with class inheritance i.e., inherit From Other Classes <br>
+>> Parent Classes and Child Classes <br>
+>> Extend the functionality of Parent Classes using Child class <br>
+>> Object checking <br>
