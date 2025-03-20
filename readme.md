@@ -154,3 +154,11 @@
 >> Prime Number Checking <br>
 >> Multi-threading for Simultaneous Execution <br>
 >> Ensuring Efficient Code Execution with Threads <br>
+## Day 9
+## Concepts
+>> Class and Object creation
+>> Instance variables and Methods, and Class level attributes
+>> Model systems with class inheritance i.e., inherit From Other Classes
+>> Parent Classes and Child Classes
+>> Extend the functionality of Parent Classes using Child class
+>> Object checking
