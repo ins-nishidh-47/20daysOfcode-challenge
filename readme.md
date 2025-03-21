@@ -162,3 +162,113 @@
 >> Parent Classes and Child Classes <br>
 >> Extend the functionality of Parent Classes using Child class <br>
 >> Object checking <br>
+## Day 10
+> Understanding Python Decorators and their applications.
+### Introduction to Decorators <br>
+>> A function that modifies another function without changing its original code. <br>
+>> Used for logging, authentication, caching, etc. <br>
+
+### Basic Decorator Syntax <br>
+```python
+# Defining a simple decorator
+
+def decorator(func):
+    def wrapper():
+        print("Before the function runs")  # Code before the function execution
+        func()  # Calling the original function
+        print("After the function runs")   # Code after the function execution
+    return wrapper  # Returning the wrapper function
+
+# Applying the decorator using @ syntax
+@decorator
+def say_hello():
+    print("Hello, World!")
+
+say_hello()
+```
+### Output:
+```
+Before the function runs
+Hello, World!
+After the function runs
+```
+
+### Why Use Decorators? <br>
+>> Code reusability <br>
+>> Keeps code **clean** and **modular** <br>
+>> Useful for logging, authentication, caching, etc. <br>
+
+### Decorator with Arguments <br>
+```python
+# A decorator that wraps a function and adds extra behavior
+def decorator(func):
+    def wrapper(*args, **kwargs):
+        print("Function is being called...")  # Before function execution
+        result = func(*args, **kwargs)  # Calling the original function
+        print("Function execution finished!")  # After function execution
+        return result  # Returning the function's result
+    return wrapper
+
+@decorator
+def add(a, b):
+    return a + b
+
+print(add(5, 3))  # Output: Function logs + sum result
+```
+### Output:
+```
+Function is being called...
+Function execution finished!
+8
+```
+
+### Stacking Multiple Decorators <br>
+```python
+# First decorator - Makes text bold
+def bold(func):
+    def wrapper():
+        return "<b>" + func() + "</b>"  # Wraps output in <b> tags
+    return wrapper
+
+# Second decorator - Makes text italic
+def italic(func):
+    def wrapper():
+        return "<i>" + func() + "</i>"  # Wraps output in <i> tags
+    return wrapper
+
+# Applying both decorators
+@bold
+@italic
+def text():
+    return "Hello, Decorators!"  # Function returns simple text
+
+print(text())  # Output: <b><i>Hello, Decorators!</i></b>
+```
+
+### Logging Decorator <br>
+> A **logging decorator** can be used to track function calls and parameters. <br>
+```python
+def logger(func):
+    def wrapper(*args, **kwargs):
+        print(f"Calling {func.__name__} with arguments {args} {kwargs}")  # Logs function details
+        return func(*args, **kwargs)  # Calls the original function
+    return wrapper
+
+@logger
+def multiply(a, b):
+    return a * b
+
+print(multiply(3, 4))  # Output: Function logs + product result
+```
+### Output:
+```
+Calling multiply with arguments (3, 4) {}
+12
+```
+
+### Conclusion <br>
+> Decorators are a powerful feature in Python that allow you to **modify functions dynamically**. <br>
+> They help in keeping code clean, reusable, and structured. <br>
+
+🚀 Stay tuned for more advanced decorator usage!
+
