@@ -269,6 +269,114 @@ Calling multiply with arguments (3, 4) {}
 ### Conclusion <br>
 > Decorators are a powerful feature in Python that allow you to **modify functions dynamically**. <br>
 > They help in keeping code clean, reusable, and structured. <br>
+## Day 11
+> Advanced Python Decorators and Real-World Applications.
 
-🚀 Stay tuned for more advanced decorator usage!
+
+### Import time module to measure execution time
+```python
+def timer(func):
+    def wrapper(*args, **kwargs):
+        start_time = time.time()  # Record the start time
+        result = func(*args, **kwargs)  # Execute the function
+        end_time = time.time()  # Record the end time
+        print(f"Execution time: {end_time - start_time:.4f} seconds")  # Print elapsed time
+        return result
+    return wrapper
+
+@timer
+def test():
+    time.sleep(2)  # Simulate a function that takes time
+    print("Function executed!")
+
+test()
+```
+
+### Decorators with Return Values <br>
+```python
+# A decorator that modifies the return value
+def double_result(func):
+    def wrapper(*args, **kwargs):
+        result = func(*args, **kwargs)
+        return result * 2  # Modifies the function output
+    return wrapper
+
+@double_result
+def get_number():
+    return 10
+
+print(get_number())  # Output: 20
+```
+### Output:
+```
+20
+```
+
+### Preserving Function Metadata Using `functools.wraps` <br>
+```python
+import functools
+
+def decorator(func):
+    @functools.wraps(func)  # Preserves original function metadata
+    def wrapper(*args, **kwargs):
+        print("Function is being called...")
+        return func(*args, **kwargs)
+    return wrapper
+
+@decorator
+def example_function():
+    """This is an example function."""
+    return "Hello, world!"
+
+print(example_function.__name__)  # Output: example_function
+print(example_function.__doc__)   # Output: This is an example function.
+```
+
+### Using Decorators for Authentication <br>
+```python
+# Simulating user authentication
+def authenticate(user):
+    def decorator(func):
+        def wrapper(*args, **kwargs):
+            if user == "admin":
+                return func(*args, **kwargs)  # Only admins can access
+            else:
+                return "Access Denied"
+        return wrapper
+    return decorator
+
+@authenticate("admin")
+def secret_data():
+    return "This is confidential information."
+
+print(secret_data())  # Output: This is confidential information.
+```
+
+### Class-Based Decorators <br>
+```python
+# Creating a decorator using a class
+class MyDecorator:
+    def __init__(self, func):
+        self.func = func
+    def __call__(self, *args, **kwargs):
+        print("Function is being called...")
+        return self.func(*args, **kwargs)
+
+@MyDecorator
+def say_hello():
+    return "Hello, World!"
+
+print(say_hello())
+```
+### Output:
+```
+Function is being called...
+Hello, World!
+```
+
+### Conclusion <br>
+> Decorators can be used for **logging, modifying return values, authentication, and preserving metadata.** <br>
+> They make Python code more modular and maintainable. <br>
+
+
 
