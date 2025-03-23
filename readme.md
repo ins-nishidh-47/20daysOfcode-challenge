@@ -378,5 +378,23 @@ Hello, World!
 > Decorators can be used for **logging, modifying return values, authentication, and preserving metadata.** <br>
 > They make Python code more modular and maintainable. <br>
 
+## Day 12
+> Understanding Polymorphism and String Formatting in Python.
+
+### Polymorphism <br>
+>> Duck Typing (Implicit Polymorphism) <br>
+>> Function Overloading using `*args` <br>
+
+### String Formatting <br>
+>> Old-style (`%` formatting) <br>
+>> `.format()` method <br>
+>> F-strings (Recommended) <br>
+>> Alignment and padding methods (`<`, `>`, `^`) <br>
+>> Joining strings using `.join()` <br>
+>> Padding methods: `.ljust()`, `.rjust()`, `.center()` <br>
+
+### Execution <br>
+>> Run the script using: `python day12_polymorphism.py` <br>
+
 
 
