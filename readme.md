@@ -396,5 +396,36 @@ Hello, World!
 ### Execution <br>
 >> Run the script using: `python day12_polymorphism.py` <br>
 
+## Day 13
+> Exploring Python's `datetime`, `json`, and `re` modules along with their mathematical methods.
 
+### Datetime Module <br>
+>> Getting the current date and time using `datetime.now()` <br>
+>> Formatting date and time with `strftime()` <br>
+>> Parsing dates using `strptime()` <br>
+>> Working with time differences using `timedelta` <br>
+>> Getting individual components like year, month, day, hour, minute, second <br>
+>> Mathematical methods:<br>
+>>> `timestamp()` - Convert datetime to a timestamp <br>
+>>> `fromtimestamp()` - Convert timestamp to datetime <br>
 
+### JSON Module <br>
+>> Converting Python objects to JSON using `json.dumps()` <br>
+>> Parsing JSON to Python objects using `json.loads()` <br>
+>> Reading JSON files using `json.load()` <br>
+>> Writing JSON to files using `json.dump()` <br>
+>> Formatting JSON output with `indent` and `sort_keys` <br>
+>> Mathematical methods:<br>
+>>> `float()` - Convert numeric values in JSON <br>
+>>> `int()` - Convert integers from JSON <br>
+
+### Regular Expressions (re Module) <br>
+>> Matching patterns using `re.match()` <br>
+>> Searching for patterns using `re.search()` <br>
+>> Finding all occurrences using `re.findall()` <br>
+>> Replacing text using `re.sub()` <br>
+>> Splitting strings using `re.split()` <br>
+>> Using special sequences like `\d`, `\w`, `\s` <br>
+>> Mathematical methods:<br>
+>>> `findall()` - Count occurrences of numeric patterns <br>
+>>> `sub()` - Replace numeric values dynamically <br>
