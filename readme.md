@@ -429,3 +429,114 @@ Hello, World!
 >> Mathematical methods:<br>
 >>> `findall()` - Count occurrences of numeric patterns <br>
 >>> `sub()` - Replace numeric values dynamically <br>
+
+# Day 14 - Introduction to Django
+
+## What is Django?
+- A high-level Python web framework.
+- Encourages rapid development and clean, pragmatic design.
+- Follows the **MVT (Model-View-Template)** architecture.
+
+## Installing Django
+```bash
+pip install django
+```
+- Verify installation using:
+```bash
+django-admin --version
+```
+
+## Creating a Django Project
+```bash
+django-admin startproject myproject
+```
+### Project Structure:
+```
+myproject/
+│── manage.py
+│── myproject/
+    │── __init__.py
+    │── settings.py
+    │── urls.py
+    │── wsgi.py
+```
+
+## Running the Development Server
+```bash
+cd myproject
+python manage.py runserver
+```
+- Default server runs at `http://127.0.0.1:8000/`
+
+## Creating a Django App
+```bash
+python manage.py startapp myapp
+```
+### App Structure:
+```
+myapp/
+│── __init__.py
+│── admin.py
+│── apps.py
+│── models.py
+│── tests.py
+│── views.py
+│── migrations/
+```
+
+## Registering the App
+- Add `'myapp'` to `INSTALLED_APPS` in `settings.py`.
+
+## Creating a Simple View
+```python
+# myapp/views.py
+from django.http import HttpResponse
+
+def home(request):
+    return HttpResponse("Hello, Django!")
+```
+
+## Configuring URLs
+```python
+# myapp/urls.py
+from django.urls import path
+from .views import home
+
+urlpatterns = [
+    path('', home, name='home'),
+]
+```
+- Link the app's URLs to the project’s `urls.py`:
+```python
+# myproject/urls.py
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('myapp.urls')),
+]
+```
+
+## Running the Application
+```bash
+python manage.py runserver
+```
+- Visit `http://127.0.0.1:8000/` to see the output.
+
+## Django Admin Panel
+- Create a superuser:
+```bash
+python manage.py createsuperuser
+```
+- Login at `http://127.0.0.1:8000/admin/`.
+
+## created home.html in templates for fronted
+- render it in views.py 
+```
+from django.shortcuts import render
+
+def home(request):
+    return render(request, "home.html")
+
+```

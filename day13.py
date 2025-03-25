@@ -81,6 +81,6 @@ if first_number:
     print("First Number Found:", first_number.group())
 
 # 5️ Split a string using regex
-bug_text = "Bug#101, Bug#102, Bug#103"
+bug_text = "B   ug#101, Bug#102, Bug#103"
 split_text = re.split(r", ", bug_text)
 print("Split Text:", split_text)
