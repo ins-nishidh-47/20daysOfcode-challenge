@@ -540,3 +540,41 @@ def home(request):
     return render(request, "home.html")
 
 ```
+
+## Day 15
+> Diving deeper into Django by exploring applications, models, migrations, and the admin panel.
+
+### Creating a Django App <br>
+>> `python manage.py startapp myapp` <br>
+>> Register the app in `INSTALLED_APPS` in `settings.py` <br>
+
+### Understanding Models in Django <br>
+>> What are models? <br>
+>> Creating models using `models.Model` <br>
+>> Defining fields: `CharField`, `IntegerField`, `DateTimeField`, `BooleanField`, etc. <br>
+>> Adding `__str__` method for readable representation <br>
+
+### Migrations in Django <br>
+>> What are migrations? <br>
+>> Creating migrations using `python manage.py makemigrations` <br>
+>> Applying migrations using `python manage.py migrate` <br>
+>> Checking migration history <br>
+
+### Django Admin Panel <br>
+>> Creating a superuser using `python manage.py createsuperuser` <br>
+>> Registering models in `admin.py` <br>
+>> Exploring the Django admin interface <br>
+>> Customizing the admin panel <br>
+
+### Querying the Database Using ORM <br>
+>> `Model.objects.all()` - Fetching all records <br>
+>> `Model.objects.filter()` - Filtering records <br>
+>> `Model.objects.get()` - Getting a single record <br>
+>> `Model.objects.create()` - Creating new records <br>
+>> `Model.objects.update()` - Updating existing records <br>
+>> `Model.objects.delete()` - Deleting records <br>
+
+### Practical Exercises <br>
+>> Creating a simple model for a blog post <br>
+>> Performing CRUD operations using Django ORM <br>
+>> Exploring Django shell (`python manage.py shell`) <br>
