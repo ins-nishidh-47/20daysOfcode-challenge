@@ -578,3 +578,59 @@ def home(request):
 >> Creating a simple model for a blog post <br>
 >> Performing CRUD operations using Django ORM <br>
 >> Exploring Django shell (`python manage.py shell`) <br>
+
+# Day 16 - SQLite Migrations: Insert, Update, and Delete
+
+## Overview
+On Day 3 of learning Django, we focused on **adding, updating, and deleting records** in SQLite using Django migrations. Below are step-by-step instructions on performing these operations efficiently.
+
+---
+
+## 1️⃣ Adding a Record
+
+### **Model Definition**
+Define a model in `models.py`:
+
+```python
+from django.db import models
+
+class Student(models.Model):
+    name = models.CharField(max_length=100)
+    age = models.IntegerField()
+    email = models.EmailField(unique=True)
+
+    def __str__(self):
+        return self.name
+```
+
+### **Run Migrations**
+```sh
+python manage.py makemigrations
+python manage.py migrate
+```
+
+### **Insert Data using Django Shell**
+```sh
+python manage.py shell
+```
+Then, execute:
+```python
+from myapp.models import Student
+student = Student(name="John Doe", age=20, email="johndoe@example.com")
+student.save()
+```
+
+---
+
+## 2️⃣ Updating a Record
+
+### **Update a Record using Django Shell**
+```python
+student = Student.objects.get(id=1)  # Fetch student by ID
+student.age = 21  # Modify age
+student.save()  # Save changes
+```
+
+### **Update a Record using Views**
+```python
+from django.shortcuts import
