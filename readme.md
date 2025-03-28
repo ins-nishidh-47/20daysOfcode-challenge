@@ -634,3 +634,70 @@ student.save()  # Save changes
 ### **Update a Record using Views**
 ```python
 from django.shortcuts import
+
+#Day-17 - Django Student Management System
+
+This is a simple Django project to manage student records. It allows users to add, update, delete, and list student records using an SQLite database.
+
+## Features
+- Add new students
+- Update student records
+- Delete students
+- List all students
+
+## Installation
+
+### Prerequisites
+Make sure you have Python installed (recommended version: 3.x) and Django set up.
+
+### Clone the Repository
+```bash
+git clone <repository-url>
+cd <project-directory>
+```
+
+### Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### Run Migrations
+```bash
+python manage.py migrate
+```
+
+### Start the Server
+```bash
+python manage.py runserver
+```
+
+## Usage
+- Open `http://127.0.0.1:8000/` in your browser.
+- Use the interface to manage student records.
+
+## Project Structure
+```
+project-directory/
+│── manage.py
+│── db.sqlite3
+│── requirements.txt
+│── students/
+│   ├── migrations/
+│   ├── templates/
+│   │   ├── add_student.html
+│   │   ├── update_student.html
+│   │   ├── delete_student.html
+│   │   ├── student_list.html
+│   ├── views.py
+│   ├── models.py
+│   ├── urls.py
+│   ├── forms.py
+│── templates/
+│── static/
+```
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+This project is licensed under the MIT License.
