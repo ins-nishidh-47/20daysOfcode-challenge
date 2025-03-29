@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Template Demo</title>
+</head>
+<body>
+    <h2>Welcome, {{ name }}!</h2>
+    <p>Age: {{ age }}</p>
+
+    <!-- If-Else Condition -->
+    {% if marks >= 50 %}
+        <p>Status: <strong>Pass</strong></p>
+    {% else %}
+        <p>Status: <strong>Fail</strong></p>
+    {% endif %}
+
+    <!-- For Loop -->
+    <h3>Student List:</h3>
+    <ul>
+        {% for student in students %}
+            <li>{{ student }}</li>
+        {% endfor %}
+    </ul>
+
+    <!-- Comment Example -->
+    {# This is a Django comment and will not be displayed in the HTML #}
+
+    <!-- Including another template -->
+    {% include "myapp/extra.html" %}
+</body>
+</html>

@@ -701,3 +701,22 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ## License
 This project is licensed under the MIT License.
+
+# Django Template Concepts (Day 18)
+
+This repository provides an in-depth demonstration of various Django template concepts, helping you understand how templates work in Django applications.
+
+✅ Django Variables  
+✅ Django Tags  
+✅ Django If-Else  
+✅ Django For Loop  
+✅ Django Comment  
+✅ Django Include  
+
+## 📌 Project Setup
+
+### 1️⃣ Create a Django Project and App
+```bash
+django-admin startproject myproject
+cd myproject
+python manage.py startapp myapp
