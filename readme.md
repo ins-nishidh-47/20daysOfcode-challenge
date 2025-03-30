@@ -720,3 +720,136 @@ This repository provides an in-depth demonstration of various Django template co
 django-admin startproject myproject
 cd myproject
 python manage.py startapp myapp
+
+
+# Day 19: Handling 404 Page in Django
+
+## 📌 Overview
+how to create a custom **404 Page Not Found** error page in Django. Instead of displaying Django’s default error page, we designed a user-friendly 404 page with custom styling.
+
+---
+
+## 📂 Project Structure
+```
+myproject/
+│── myproject/
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   ├── wsgi.py
+│── myapp/
+│   ├── __init__.py
+│   ├── views.py
+│   ├── urls.py
+│   ├── templates/
+│   │   ├── home.html
+│   │   ├── 404.html
+│── manage.py
+```
+
+---
+
+## 🛠️ Steps to Implement Custom 404 Page
+
+### 1️⃣ **Create a Custom 404 Template**
+Inside your Django app, create a `templates` folder and add a `404.html` file:
+
+#### `myapp/templates/404.html`
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        h1 { font-size: 60px; color: #333; }
+        h2 { font-size: 24px; color: #555; margin-bottom: 10px; }
+        p { font-size: 16px; color: #777; margin-bottom: 20px; }
+        .buttons { display: flex; justify-content: center; gap: 10px; }
+        .btn {
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        .btn-back { background: #ddd; color: #333; border: 1px solid #ccc; }
+        .btn-home { background: #007bff; color: white; border: none; }
+        .btn:hover { opacity: 0.8; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>404</h1>
+        <h2>Page Not Found</h2>
+        <p>Oops! The page you are looking for has moved or doesn't exist.</p>
+        <div class="buttons">
+            <a href="javascript:history.back()" class="btn btn-back">Go Back</a>
+            <a href="/" class="btn btn-home">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
+```
+
+### 2️⃣ **Create a Custom 404 View**
+In `myapp/views.py`, add a function to handle 404 errors:
+```python
+from django.shortcuts import render
+
+def custom_404_view(request, exception):
+    return render(request, '404.html', status=404)
+```
+
+### 3️⃣ **Register the 404 Handler**
+In `myproject/urls.py`, add this line at the bottom:
+```python
+from myapp.views import custom_404_view
+from django.conf.urls import handler404
+
+handler404 = custom_404_view
+```
+
+### 4️⃣ **Update `settings.py`**
+Ensure `DEBUG = False` and allow all hosts (only for testing, change it in production):
+```python
+DEBUG = False  # Set to False in production
+ALLOWED_HOSTS = ['*']  # Replace '*' with your domain in production
+```
+
+---
+
+## 🚀 Running the Project
+```sh
+python manage.py runserver
+```
+- Visit **http://127.0.0.1:8000/** → Home Page ✅
+- Visit **http://127.0.0.1:8000/non-existent/** → Custom 404 Page ✅
+
+---
+
+## 🎯 Summary
+✅ Created a **custom 404 template**
+✅ Added a **view function** to handle 404 errors
+✅ Configured **Django to use the custom 404 page**
+
+Now, when users enter a wrong URL, they will see your **beautiful 404 page instead of Django's default error page!** 🎉
