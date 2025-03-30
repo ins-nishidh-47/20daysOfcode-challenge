@@ -721,7 +721,7 @@ django-admin startproject myproject
 cd myproject
 python manage.py startapp myapp
 
-
+```
 # Day 19: Handling 404 Page in Django
 
 ## 📌 Overview
