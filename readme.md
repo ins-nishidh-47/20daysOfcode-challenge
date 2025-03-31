@@ -853,3 +853,29 @@ python manage.py runserver
 ✅ Configured **Django to use the custom 404 page**
 
 Now, when users enter a wrong URL, they will see your **beautiful 404 page instead of Django's default error page!** 🎉
+
+# Day 20: Django Weather App 🌦️
+
+## Final Day of My 20-Day Python Coding Sprint! 🎉
+
+Wrapping up this epic streak with a sleek **Django Weather App** powered by the **OpenWeather API**! 🚀
+
+### Features:
+✅ Fetches real-time weather data ☀️🌧️❄️
+✅ Uses **Django + SQLite3** for backend storage 📊
+✅ Implements **CRUD operations** (Create, Read, Update, Delete) efficiently 💡
+✅ Seamless UI for searching and displaying weather information 🎨
+
+### Tech Stack:
+- **Python** 🐍
+- **Django** 🌍
+- **SQLite3** 🗄️
+- **OpenWeather API** 🌍
+- **HTML/CSS** 🎨
+
+### What I Learned:
+🔹 Mastered **Django models, views, templates, and forms**
+🔹 Strengthened **CRUD operations (GET, POST, DELETE, UPDATE)**
+🔹 Worked with **external APIs** for fetching live data
+🔹 Improved **frontend-backend integration**
+
